@@ -1,0 +1,112 @@
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: '00b14fa95bda'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: false)
+==> 1 error occurred:
+	* Failed to join 192.168.42.42: dial tcp 192.168.42.42:7946: connect: connection refused
+
+
+Application started
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: '00b14fa95bda'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: false)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2021/12/25 10:19:19 [INFO] agent: Serf agent starting
+    2021/12/25 10:19:19 [INFO] serf: EventMemberJoin: 00b14fa95bda 192.168.42.22
+    2021/12/25 10:19:19 [INFO] agent: joining: [ha] replay: false
+    2021/12/25 10:19:19 [INFO] serf: EventMemberJoin: 45832f433acd 192.168.42.42
+    2021/12/25 10:19:19 [INFO] agent: joined: 1 nodes
+    2021/12/25 10:19:19 [INFO] serf: EventMemberJoin: ee77e637a4e1 192.168.42.11
+[0mHEAD / [32m200 [0m8.250 ms - 129[0m
+    2021/12/25 10:19:20 [INFO] agent: Received event: member-join
+[0mHEAD / [32m200 [0m2.769 ms - 129[0m
+[0mHEAD / [32m200 [0m1.141 ms - 129[0m
+[0mHEAD / [32m200 [0m1.187 ms - 129[0m
+[0mHEAD / [32m200 [0m1.358 ms - 129[0m
+[0mHEAD / [32m200 [0m1.249 ms - 129[0m
+[0mHEAD / [32m200 [0m1.308 ms - 129[0m
+[0mHEAD / [32m200 [0m1.456 ms - 129[0m
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2021/12/25 10:19:34 [INFO] agent: requesting graceful leave from Serf
+[cont-finish.d] executing container finish scripts...
+[cont-finish.d] done.
+[s6-finish] waiting for services.
+[s6-finish] sending all processes the TERM signal.
+    2021/12/25 10:19:34 [INFO] agent: requesting serf shutdown
+    2021/12/25 10:19:34 [WARN] serf: Shutdown without a Leave
+    2021/12/25 10:19:34 [INFO] agent: shutdown complete
+[s6-finish] sending all processes the KILL signal and exiting.
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: '00b14fa95bda'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: false)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2021/12/25 10:21:54 [INFO] agent: Serf agent starting
+    2021/12/25 10:21:54 [INFO] serf: EventMemberJoin: 00b14fa95bda 192.168.42.22
+    2021/12/25 10:21:54 [INFO] agent: joining: [ha] replay: false
+    2021/12/25 10:21:54 [INFO] serf: EventMemberJoin: 45832f433acd 192.168.42.42
+    2021/12/25 10:21:54 [INFO] agent: joined: 1 nodes
+    2021/12/25 10:21:55 [INFO] serf: EventMemberJoin: ee77e637a4e1 192.168.42.11
+Application started
+[0mHEAD / [32m200 [0m12.357 ms - 129[0m
+    2021/12/25 10:21:56 [INFO] agent: Received event: member-join
+[0mHEAD / [32m200 [0m7.290 ms - 129[0m
+[0mHEAD / [32m200 [0m1.663 ms - 129[0m
+[0mHEAD / [32m200 [0m1.255 ms - 129[0m
+[0mHEAD / [32m200 [0m1.361 ms - 129[0m
+[0mHEAD / [32m200 [0m1.467 ms - 129[0m
+[0mHEAD / [32m200 [0m1.018 ms - 129[0m
+[0mHEAD / [32m200 [0m1.101 ms - 129[0m
+[0mHEAD / [32m200 [0m3.161 ms - 129[0m
+[0mHEAD / [32m200 [0m1.390 ms - 129[0m
+[0mHEAD / [32m200 [0m1.149 ms - 129[0m
+[0mHEAD / [32m200 [0m1.222 ms - 129[0m
+[0mHEAD / [32m200 [0m1.273 ms - 129[0m

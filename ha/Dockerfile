@@ -27,11 +27,12 @@ RUN mkdir /opt/bin \
 COPY services/ha /etc/services.d/ha
 RUN chmod +x /etc/services.d/ha/run
 
-# TODO: [Serf] Add Serf S6 setup
 COPY services/serf/run /etc/services.d/serf/run
 RUN chmod +x /etc/services.d/serf/run
 
 # TODO: [Serf] Copy events handler scripts
+COPY scripts/* /serf-handlers/
+RUN chmod +x /serf-handlers/
 
 # Copy the haproxy and syslog config
 COPY config/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg

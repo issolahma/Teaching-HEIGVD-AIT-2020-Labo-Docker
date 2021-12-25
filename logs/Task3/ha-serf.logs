@@ -1,0 +1,11 @@
+Member join script triggered
+Member join event received from: 45832f433acd with role balancer
+Member join event received from: 00b14fa95bda with role backend
+Member join event received from: ee77e637a4e1 with role backend
+Member leave/join script triggered
+Member member-leave event received from: ee77e637a4e1 with role backend
+Member join script triggered
+Member join event received from: 45832f433acd with role balancer
+Member join script triggered
+Member join event received from: ee77e637a4e1 with role backend
+Member join event received from: 00b14fa95bda with role backend
