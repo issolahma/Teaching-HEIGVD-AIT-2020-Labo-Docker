@@ -1,0 +1,77 @@
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+/opt/bin/serf agent --join ha --replay --event-handler member-join=/serf-handlers/member-join.sh --event-handler member-leave,member-failed=/serf-handlers/member-leave.sh --tag role=balancer
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: '5d4da00efb9c'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: true)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2021/12/25 10:02:03 [INFO] agent: Serf agent starting
+    2021/12/25 10:02:03 [INFO] serf: EventMemberJoin: 5d4da00efb9c 192.168.42.42
+    2021/12/25 10:02:03 [INFO] agent: joining: [ha] replay: true
+    2021/12/25 10:02:03 [INFO] agent: joined: 1 nodes
+    2021/12/25 10:02:03 [INFO] serf: EventMemberJoin: d14a8f7ae190 192.168.42.22
+    2021/12/25 10:02:03 [INFO] serf: EventMemberJoin: ac1dae0b7ec1 192.168.42.11
+    2021/12/25 10:02:04 [INFO] agent: Received event: member-join
+    2021/12/25 10:02:04 [ERR] agent: Error invoking script '/serf-handlers/member-join.sh': exit status 127
+    2021/12/25 10:04:28 [INFO] memberlist: Suspect d14a8f7ae190 has failed, no acks received
+    2021/12/25 10:04:30 [INFO] memberlist: Suspect ac1dae0b7ec1 has failed, no acks received
+    2021/12/25 10:04:32 [INFO] memberlist: Marking d14a8f7ae190 as failed, suspect timeout reached (0 peer confirmations)
+    2021/12/25 10:04:32 [INFO] serf: EventMemberLeave: d14a8f7ae190 192.168.42.22
+    2021/12/25 10:04:33 [INFO] memberlist: Suspect d14a8f7ae190 has failed, no acks received
+    2021/12/25 10:04:33 [INFO] agent: Received event: member-leave
+    2021/12/25 10:04:33 [ERR] agent: Error invoking script '/serf-handlers/member-leave.sh': exit status 127
+    2021/12/25 10:04:34 [INFO] memberlist: Marking ac1dae0b7ec1 as failed, suspect timeout reached (0 peer confirmations)
+    2021/12/25 10:04:34 [INFO] serf: EventMemberLeave: ac1dae0b7ec1 192.168.42.11
+    2021/12/25 10:04:35 [INFO] agent: Received event: member-leave
+    2021/12/25 10:04:35 [ERR] agent: Error invoking script '/serf-handlers/member-leave.sh': exit status 127
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+/opt/bin/serf agent --join ha --replay --event-handler member-join=/serf-handlers/member-join.sh --event-handler member-leave,member-failed=/serf-handlers/member-leave.sh --tag role=balancer
+[services.d] done.
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: '5d4da00efb9c'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: true)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2021/12/25 10:04:53 [INFO] agent: Serf agent starting
+    2021/12/25 10:04:53 [INFO] serf: EventMemberJoin: 5d4da00efb9c 192.168.42.42
+    2021/12/25 10:04:53 [INFO] agent: joining: [ha] replay: true
+    2021/12/25 10:04:53 [INFO] agent: joined: 1 nodes
+    2021/12/25 10:04:54 [INFO] agent: Received event: member-join
+    2021/12/25 10:04:54 [ERR] agent: Error invoking script '/serf-handlers/member-join.sh': exit status 127
+    2021/12/25 10:05:40 [INFO] serf: EventMemberJoin: ac1dae0b7ec1 192.168.42.11
+    2021/12/25 10:05:41 [INFO] serf: EventMemberJoin: d14a8f7ae190 192.168.42.22
+    2021/12/25 10:05:42 [INFO] agent: Received event: member-join
+    2021/12/25 10:05:42 [ERR] agent: Error invoking script '/serf-handlers/member-join.sh': exit status 127

@@ -1,0 +1,206 @@
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'ac1dae0b7ec1'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: false)
+==> 1 error occurred:
+	* Failed to join 192.168.42.42: dial tcp 192.168.42.42:7946: connect: connection refused
+
+
+Application started
+[0mHEAD / [32m200 [0m9.817 ms - 129[0m
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'ac1dae0b7ec1'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: false)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2021/12/25 10:02:03 [INFO] agent: Serf agent starting
+    2021/12/25 10:02:03 [INFO] serf: EventMemberJoin: ac1dae0b7ec1 192.168.42.11
+    2021/12/25 10:02:03 [INFO] agent: joining: [ha] replay: false
+    2021/12/25 10:02:03 [INFO] serf: EventMemberJoin: d14a8f7ae190 192.168.42.22
+    2021/12/25 10:02:03 [INFO] serf: EventMemberJoin: 5d4da00efb9c 192.168.42.42
+    2021/12/25 10:02:03 [INFO] agent: joined: 1 nodes
+    2021/12/25 10:02:04 [INFO] agent: Received event: member-join
+[0mHEAD / [32m200 [0m2.723 ms - 129[0m
+[0mHEAD / [32m200 [0m1.331 ms - 129[0m
+[0mHEAD / [32m200 [0m2.049 ms - 129[0m
+[0mHEAD / [32m200 [0m1.364 ms - 129[0m
+[0mHEAD / [32m200 [0m1.379 ms - 129[0m
+[0mHEAD / [32m200 [0m1.109 ms - 129[0m
+[0mHEAD / [32m200 [0m1.014 ms - 129[0m
+[0mHEAD / [32m200 [0m1.796 ms - 129[0m
+[0mHEAD / [32m200 [0m1.369 ms - 129[0m
+[0mHEAD / [32m200 [0m1.488 ms - 129[0m
+[0mHEAD / [32m200 [0m1.234 ms - 129[0m
+[0mHEAD / [32m200 [0m1.222 ms - 129[0m
+[0mHEAD / [32m200 [0m1.161 ms - 129[0m
+[0mHEAD / [32m200 [0m1.061 ms - 129[0m
+[0mHEAD / [32m200 [0m1.877 ms - 129[0m
+[0mHEAD / [32m200 [0m1.190 ms - 129[0m
+[0mHEAD / [32m200 [0m1.029 ms - 129[0m
+[0mHEAD / [32m200 [0m0.906 ms - 129[0m
+[0mHEAD / [32m200 [0m1.030 ms - 129[0m
+[0mHEAD / [32m200 [0m0.904 ms - 129[0m
+[0mHEAD / [32m200 [0m1.205 ms - 129[0m
+[0mHEAD / [32m200 [0m1.011 ms - 129[0m
+[0mHEAD / [32m200 [0m0.932 ms - 129[0m
+[0mHEAD / [32m200 [0m0.875 ms - 129[0m
+[0mHEAD / [32m200 [0m1.083 ms - 129[0m
+[0mHEAD / [32m200 [0m0.852 ms - 129[0m
+[0mHEAD / [32m200 [0m1.641 ms - 129[0m
+[0mHEAD / [32m200 [0m0.973 ms - 129[0m
+[0mHEAD / [32m200 [0m0.998 ms - 129[0m
+[0mHEAD / [32m200 [0m1.050 ms - 129[0m
+[0mHEAD / [32m200 [0m1.149 ms - 129[0m
+[0mHEAD / [32m200 [0m0.875 ms - 129[0m
+[0mHEAD / [32m200 [0m0.896 ms - 129[0m
+[0mHEAD / [32m200 [0m1.411 ms - 129[0m
+[0mHEAD / [32m200 [0m1.221 ms - 129[0m
+[0mHEAD / [32m200 [0m0.975 ms - 129[0m
+[0mHEAD / [32m200 [0m2.504 ms - 129[0m
+[0mHEAD / [32m200 [0m0.756 ms - 129[0m
+[0mHEAD / [32m200 [0m0.951 ms - 129[0m
+[0mHEAD / [32m200 [0m1.112 ms - 129[0m
+[0mHEAD / [32m200 [0m0.917 ms - 129[0m
+[0mHEAD / [32m200 [0m0.893 ms - 129[0m
+[0mHEAD / [32m200 [0m1.206 ms - 129[0m
+[0mHEAD / [32m200 [0m2.239 ms - 129[0m
+[0mHEAD / [32m200 [0m0.873 ms - 129[0m
+[0mHEAD / [32m200 [0m0.924 ms - 129[0m
+[0mHEAD / [32m200 [0m0.954 ms - 129[0m
+[0mHEAD / [32m200 [0m0.778 ms - 129[0m
+[0mHEAD / [32m200 [0m0.904 ms - 129[0m
+[0mHEAD / [32m200 [0m1.320 ms - 129[0m
+[0mHEAD / [32m200 [0m0.869 ms - 129[0m
+[0mHEAD / [32m200 [0m1.955 ms - 129[0m
+[0mHEAD / [32m200 [0m0.972 ms - 129[0m
+[0mHEAD / [32m200 [0m1.155 ms - 129[0m
+[0mHEAD / [32m200 [0m0.948 ms - 129[0m
+[0mHEAD / [32m200 [0m0.829 ms - 129[0m
+[0mHEAD / [32m200 [0m0.934 ms - 129[0m
+[0mHEAD / [32m200 [0m0.872 ms - 129[0m
+[0mHEAD / [32m200 [0m0.806 ms - 129[0m
+[0mHEAD / [32m200 [0m2.432 ms - 129[0m
+[0mHEAD / [32m200 [0m1.006 ms - 129[0m
+[0mHEAD / [32m200 [0m0.888 ms - 129[0m
+[0mHEAD / [32m200 [0m0.942 ms - 129[0m
+[0mHEAD / [32m200 [0m0.883 ms - 129[0m
+[0mHEAD / [32m200 [0m0.800 ms - 129[0m
+[0mHEAD / [32m200 [0m0.830 ms - 129[0m
+[0mHEAD / [32m200 [0m0.877 ms - 129[0m
+[0mHEAD / [32m200 [0m0.800 ms - 129[0m
+[0mHEAD / [32m200 [0m0.897 ms - 129[0m
+[0mHEAD / [32m200 [0m0.826 ms - 129[0m
+[0mHEAD / [32m200 [0m0.827 ms - 129[0m
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2021/12/25 10:04:26 [INFO] agent: requesting graceful leave from Serf
+[cont-finish.d] executing container finish scripts...
+[cont-finish.d] done.
+[s6-finish] waiting for services.
+[s6-finish] sending all processes the TERM signal.
+    2021/12/25 10:04:27 [INFO] agent: requesting serf shutdown
+    2021/12/25 10:04:27 [WARN] serf: Shutdown without a Leave
+    2021/12/25 10:04:27 [INFO] agent: shutdown complete
+[s6-finish] sending all processes the KILL signal and exiting.
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'ac1dae0b7ec1'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+==> Joining cluster...(replay: false)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2021/12/25 10:05:40 [INFO] agent: Serf agent starting
+    2021/12/25 10:05:40 [INFO] serf: EventMemberJoin: ac1dae0b7ec1 192.168.42.11
+    2021/12/25 10:05:40 [INFO] agent: joining: [ha] replay: false
+    2021/12/25 10:05:40 [INFO] serf: EventMemberJoin: 5d4da00efb9c 192.168.42.42
+    2021/12/25 10:05:40 [INFO] agent: joined: 1 nodes
+    2021/12/25 10:05:41 [INFO] serf: EventMemberJoin: d14a8f7ae190 192.168.42.22
+Application started
+    2021/12/25 10:05:42 [INFO] agent: Received event: member-join
+[0mHEAD / [32m200 [0m18.921 ms - 129[0m
+[0mHEAD / [32m200 [0m1.782 ms - 129[0m
+[0mHEAD / [32m200 [0m1.373 ms - 129[0m
+[0mHEAD / [32m200 [0m1.266 ms - 129[0m
+[0mHEAD / [32m200 [0m1.370 ms - 129[0m
+[0mHEAD / [32m200 [0m1.244 ms - 129[0m
+[0mHEAD / [32m200 [0m0.883 ms - 129[0m
+[0mHEAD / [32m200 [0m1.100 ms - 129[0m
+[0mHEAD / [32m200 [0m1.632 ms - 129[0m
+[0mHEAD / [32m200 [0m1.363 ms - 129[0m
+[0mHEAD / [32m200 [0m1.105 ms - 129[0m
+[0mHEAD / [32m200 [0m1.196 ms - 129[0m
+[0mHEAD / [32m200 [0m1.684 ms - 129[0m
+[0mHEAD / [32m200 [0m1.310 ms - 129[0m
+[0mHEAD / [32m200 [0m1.087 ms - 129[0m
+[0mHEAD / [32m200 [0m1.094 ms - 129[0m
+[0mHEAD / [32m200 [0m1.280 ms - 129[0m
+[0mHEAD / [32m200 [0m1.202 ms - 129[0m
+[0mHEAD / [32m200 [0m1.642 ms - 129[0m
+[0mHEAD / [32m200 [0m1.399 ms - 129[0m
+[0mHEAD / [32m200 [0m1.138 ms - 129[0m
+[0mHEAD / [32m200 [0m1.047 ms - 129[0m
+[0mHEAD / [32m200 [0m0.974 ms - 129[0m
+[0mHEAD / [32m200 [0m1.080 ms - 129[0m
+[0mHEAD / [32m200 [0m3.546 ms - 129[0m
+[0mHEAD / [32m200 [0m1.378 ms - 129[0m
+[0mHEAD / [32m200 [0m0.947 ms - 129[0m
+[0mHEAD / [32m200 [0m0.977 ms - 129[0m
+[0mHEAD / [32m200 [0m1.012 ms - 129[0m
+[0mHEAD / [32m200 [0m2.342 ms - 129[0m
+[0mHEAD / [32m200 [0m0.935 ms - 129[0m
+[0mHEAD / [32m200 [0m0.852 ms - 129[0m
+[0mHEAD / [32m200 [0m0.978 ms - 129[0m
+[0mHEAD / [32m200 [0m0.980 ms - 129[0m
+[0mHEAD / [32m200 [0m2.087 ms - 129[0m
+[0mHEAD / [32m200 [0m0.883 ms - 129[0m
+[0mHEAD / [32m200 [0m0.860 ms - 129[0m
+[0mHEAD / [32m200 [0m0.866 ms - 129[0m
+[0mHEAD / [32m200 [0m0.867 ms - 129[0m
+[0mHEAD / [32m200 [0m1.451 ms - 129[0m
+[0mHEAD / [32m200 [0m0.933 ms - 129[0m
+[0mHEAD / [32m200 [0m0.990 ms - 129[0m
+[0mHEAD / [32m200 [0m1.091 ms - 129[0m
