@@ -1,10 +1,10 @@
 # The base image is one of the offical one
-FROM node:17-alpine3.12
+FROM node:latest
 
 LABEL Maude Issolah <maude.issolah@heig-vd.ch>
 
 # Install the required tools to run our webapp and some utils
-RUN apk update && apk add bash wget curl vim npm gzip && npm install -g bower
+RUN apt-get update && apt-get -y install wget curl vim && apt-get clean && npm install -g bower
 
 # We copy the application and make sure the dependencies are installed before
 # other operations. Doing so will reduce the time required to build this image
@@ -32,7 +32,7 @@ COPY services/serf/run /etc/services.d/serf/run
 RUN chmod +x /etc/services.d/serf/run
 
 # Clean up
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Expose the ports for Serf
 EXPOSE 7946 7373

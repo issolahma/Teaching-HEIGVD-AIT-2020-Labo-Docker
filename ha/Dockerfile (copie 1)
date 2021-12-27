@@ -1,10 +1,10 @@
 # Base image is the Official HAProxy
-FROM haproxy:2.2-alpine
+FROM haproxy:2.2
 
 LABEL Maude Issolah <maude.issolah@heig-vd.ch>
 
 # Install some tools
-RUN apk update && apk add bash wget curl vim iputils rsyslog xz gzip npm
+RUN apt-get update && apt-get -y install wget curl vim iputils-ping rsyslog xz-utils
 
 # Download and install S6 overlay
 RUN curl -sSLo /tmp/s6.tar.gz https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-amd64.tar.gz \
@@ -44,10 +44,9 @@ COPY config/rsyslogd.cfg /etc/rsyslog.d/49-haproxy.conf
 COPY config/haproxy.cfg.hb /config/haproxy.cfg.hb
 
 # Clean up
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Create the nodes folder
-RUN mkdir /nodes
+# TODO: [CFG] Create the nodes folder
 
 # Expose the ports for Serf
 EXPOSE 7946 7373
