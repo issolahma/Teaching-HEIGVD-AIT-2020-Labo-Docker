@@ -8,18 +8,13 @@ Date : 12.01.2022
 
 - [AIT - Lab 04 - Docker](#ait---lab-04---docker)
   * [Introduction](#introduction)
-  * [Task 0: Identify issues and install the tools](#task-0--identify-issues-and-install-the-tools)
-  * [Task 1: Add a process supervisor to run several processes](#task-1--add-a-process-supervisor-to-run-several-processes)
-  * [Task 2: Add a tool to manage membership in the web server cluster](#task-2--add-a-tool-to-manage-membership-in-the-web-server-cluster)
-    + [Deliverables](#deliverables)
-  * [Task 3: React to membership changes](#task-3--react-to-membership-changes)
-    + [Deliverables](#deliverables-1)
-  * [Task 4: Use a template engine to easily generate configuration files](#task-4--use-a-template-engine-to-easily-generate-configuration-files)
-    + [Deliverables](#deliverables-2)
-  * [Task 5: Generate a new load balancer configuration when membership changes](#task-5--generate-a-new-load-balancer-configuration-when-membership-changes)
-    + [Deliverables](#deliverables-3)
-  * [Task 6: Make the load balancer automatically reload the new configuration](#task-6--make-the-load-balancer-automatically-reload-the-new-configuration)
-    + [Deliverables:](#deliverables-)
+  * [Task_0](#task-0)
+  * [Task_1](#task-1)
+  * [Task_2](#task-2)
+  * [Task_3](#task-3)
+  * [Task_4](#task-4)
+  * [Task 5](#task-5)
+  * [Task_6](#task-6)
   * [Difficultés](#difficult-s)
   * [Conclusion](#conclusion)
 
@@ -33,7 +28,12 @@ Nous verrons aussi comment utiliser Docker de façon plus avancée, avec l'optim
 
 
 
-## Task 0: Identify issues and install the tools
+## Task_0
+
+**Identify issues and install the tools**
+
+
+
 [M1] Do you think we can use the current solution for a production environment? 
 
 What are the main problems when deploying it in a production environment?
@@ -132,7 +132,9 @@ Repo GitHub: https://github.com/issolahma/Teaching-HEIGVD-AIT-2020-Labo-Docker
 
 
 
-## Task 1: Add a process supervisor to run several processes
+## Task_1
+
+**Add a process supervisor to run several processes**
 
 <img src="../assets/img/T1-haproxy-stat.png" style="border:1px solid grey;" />
 
@@ -149,7 +151,9 @@ research and to find more articles on that topic to illustrate the problem.
 
 
 
-## Task 2: Add a tool to manage membership in the web server cluster
+## Task_2
+
+**Add a tool to manage membership in the web server cluster**
 
 1. Give the answer to the question about the existing problem with the current solution.
 
@@ -174,21 +178,32 @@ research and to find more articles on that topic to illustrate the problem.
    >
    >Comme autre solution de découverte, nous pourrions utiliser `Traefik` (https://doc.traefik.io/traefik/) qui permet de gérer des clusters en ne travaillant que sur la couche Docker pour détecter de nouveau nœuds.
 
-### Deliverables
+
+
+**Deliverables**
 
 - [Task2 logs folder](../logs/Task2)
 
   
 
-## Task 3: React to membership changes
+## Task_3
 
-### Deliverables
+**React to membership changes**
+
+
+
+**Deliverables**
 
 - [Task3 logs folder](../logs/Task3)
 
   
 
-## Task 4: Use a template engine to easily generate configuration files
+## Task_4
+
+**Use a template engine to easily generate configuration files**
+
+
+
 1. You probably noticed when we added `xz-utils`, we have to rebuild the whole image which took some time. What can we do to mitigate that? 
    
    > Nous pouvons créer une nouvelle image basée sur la précédente (FROM ...), et y ajouter les outils voulus.
@@ -257,21 +272,29 @@ There are also some articles about techniques to reduce the image size. Try to f
 
 
 
-### Deliverables
+**Deliverables**
 
 - [Task4 logs folder](../logs/Task4)
 
   
 
-## Task 5: Generate a new load balancer configuration when membership changes
+## Task 5
 
-### Deliverables
+**Generate a new load balancer configuration when membership changes**
+
+
+
+**Deliverables**
 
 - [Task5 logs folder](../logs/Task5)
 
 
 
-## Task 6: Make the load balancer automatically reload the new configuration
+## Task_6
+
+**Make the load balancer automatically reload the new configuration**
+
+
 
 <img src="../assets/img/T6-haproxy-stat.png" style="border:1px solid grey;" />
 
@@ -289,7 +312,7 @@ Give your own feelings about the final solution. Propose improvements or ways to
 
 
 
-### Deliverables:
+**Deliverables:**
 
 [Task6 logs folder](../logs/Task6)
 
