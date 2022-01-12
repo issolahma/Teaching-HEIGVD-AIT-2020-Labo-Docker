@@ -8,14 +8,14 @@ Date : 12.01.2022
 
 - [AIT - Lab 04 - Docker](#ait---lab-04---docker)
   * [Introduction](#introduction)
-  * [Task_0](#task-0)
-  * [Task_1](#task-1)
-  * [Task_2](#task-2)
-  * [Task_3](#task-3)
-  * [Task_4](#task-4)
-  * [Task 5](#task-5)
-  * [Task_6](#task-6)
-  * [Difficultés](#difficult-s)
+  * [Task_0](#task_0)
+  * [Task_1](#task_1)
+  * [Task_2](#task_2)
+  * [Task_3](#task_3)
+  * [Task_4](#task_4)
+  * [Task 5](#task_5)
+  * [Task_6](#task_6)
+  * [Difficultés](#difficultés)
   * [Conclusion](#conclusion)
 
 
