@@ -9,7 +9,11 @@ Date : xx.xx.2022
 [TOC]
 
 ## Introduction
-<mark>TODO</mark>
+Ce laboratoire à pour objectif de nous faire expérimenter une infrastructure de load balancing utilisable en production, basé sur des conteneurs Docker. L'objectif est de mettre en place une infrastructure dynamique et évolutive.
+
+Nous verrons aussi comment utiliser Docker de façon plus avancée, avec l'optimisation de la taille des images, et la mise en place d'un superviseur de processus qui nous permet de contourner la limitation de Docker qui impose de n'avoir qu'un seul processus actif qui défini l'état du conteneur.
+
+
 
 ## Task 0: Identify issues and install the tools
 [M1] Do you think we can use the current solution for a production environment? 
